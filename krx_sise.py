@@ -221,7 +221,7 @@ for idx, i in tqdm(enumerate(range(0, 10))):
     print(e)
 
 def get_prodiddate_items(item_tb,  date):
-  engine = create_engine("mysql+pymysql://root:" + "0000" + "@13.209.4.191:3306/MY_DBNAME?charset=utf8",
+  engine = create_engine("mysql+pymysql://root:" + "PW" + "@HOST/MY_DBNAME?charset=utf8",
                            encoding='utf-8')
   sql = f"""
   SELECT * FROM MY_DBNAME.{item_tb} WHERE  Date <= '{date}' and prodid = 'A005930' ORDER BY DATE ASC;
